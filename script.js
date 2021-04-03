@@ -7,7 +7,7 @@ var btnB = $(".buttonB")
 var btnC = $(".buttonC")
 var btnD = $(".buttonD")
 var btnArray = [ ]
-buttonArray.push(buttonEl1)
+
 var questions = [
     {
         title: "If you were a tree, what kind of tree would you be?",
