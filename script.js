@@ -2,7 +2,10 @@ var startScreen = document.querySelector(".start-screen");
 var question = document.querySelector(".question");
 var currentTitle =document.querySelector(".title")
 var currentQuestion = [];
-
+var btnA = document.querySelector(".buttonA")
+var btnB = document.querySelector(".buttonB")
+var btnC = document.querySelector(".buttonC")
+var btnD = document.querySelector(".buttonD")
 
 var questions = [
     {
