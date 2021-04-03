@@ -1,17 +1,13 @@
 var startScreen = document.querySelector(".start-screen");
 var question = document.querySelector(".question");
-var currentTitle = $(".title")
-var currentQuestion = 0
-var btnA = $(".buttonA")
-var btnB = $(".buttonB")
-var btnC = $(".buttonC")
-var btnD = $(".buttonD")
-var btnArray = [ ]
+var currentTitle =document.querySelector(".title")
+var currentQuestion = [];
+
 
 var questions = [
     {
         title: "If you were a tree, what kind of tree would you be?",
-        choices: ["birch", "pine", "ironwood", "weeping willow"],
+        choices: ["Birch", "Pine", "Ironwood", "Weeping willow"],
     },
     {
         title: "if you accidentally bought 5 pounds of potatoes instead of just five potatoes, what would you do?",
@@ -30,16 +26,34 @@ var questions = [
         choices: ["Coatimundi", "Tasmanian Devil", "Kinkajou", "Binturong"],
     },
 ]
-
+var currentQuestion = 0;
 $("#start-button").on("click", function () {
     startScreen.setAttribute("style", "display: none");
     question.classList.remove("d-none")
+    askQuestions();
 })
 
+$(".buttonA").on("click", function(){
+    currentQuestion++;
+    askQuestions()
+})
+$(".buttonB").on("click", function(){
+})
+$(".buttonC").on("click", function(){
+})
+$(".buttonD").on("click", function(){
+})
+
+var btnArray = [];
+btnArray.push(btnA)
+btnArray.push(btnB)
+btnArray.push(btnC)
+btnArray.push(btnD)
+
+console.log(questions[0].choices)
 function askQuestions() {
-     currentTitle.textContent = questions[currentQuestion].title;
-    //  questionH.append(askTitle);
-    for (var i = 0; i < buttonArray.length; i++) {
-     buttonArray[i].textContent=questions[currentQuestion].choices[i];
+    currentTitle.textContent = questions[currentQuestion].title;
+    for (var i = 0; i < btnArray.length; i++) {
+    btnArray[i].textContent = questions[currentQuestion].choices[i];
     }
-  };
+};
