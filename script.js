@@ -35,16 +35,33 @@ $("#start-button").on("click", function () {
     question.classList.remove("d-none")
     askQuestions();
 })
-
 $(".buttonA").on("click", function(){
     currentQuestion++;
+    var mltplChoice =  $(".buttonA").parent().attr("1")
+    var score = $(".buttonA").siblings(".btn").val();
+    localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
 $(".buttonB").on("click", function(){
+    currentQuestion++;
+    var mltplChoice =  $(".buttonB").parent().attr("2")
+    var score = $(".buttonB").siblings(".btn").val();
+    localStorage.setItem(mltplChoice, score)
+    askQuestions()
 })
 $(".buttonC").on("click", function(){
+    currentQuestion++;
+    var mltplChoice =  $(".buttonC").parent().attr("3")
+    var score = $(".buttonC").siblings(".btn").val();
+    localStorage.setItem(mltplChoice, score)
+    askQuestions()
 })
 $(".buttonD").on("click", function(){
+    currentQuestion++;
+    var mltplChoice =  $(".buttonD").parent().attr("4")
+    var score = $(".buttonD").siblings(".btn").val();
+    localStorage.setItem(mltplChoice, score)
+    askQuestions()
 })
 
 var btnArray = [];
