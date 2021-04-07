@@ -1,0 +1,11 @@
+.fa-tint {
+    color: red;
+    animation-name: colorcode;
+    animation-duration: 20s;
+}
+@keyframes colorcode {
+    0%   {color: red;}
+  25%  {color: yellow;}
+  50%  {color: blue;}
+  100% {color: green;}
+}
