@@ -1,7 +1,6 @@
 var startScreen = document.querySelector(".start-screen");
 var question = document.querySelector(".question");
 var currentTitle =document.querySelector(".title")
-var currentQuestion = [];
 var btnA = document.querySelector(".buttonA")
 var btnB = document.querySelector(".buttonB")
 var btnC = document.querySelector(".buttonC")
@@ -29,35 +28,35 @@ var questions = [
         choices: ["Coatimundi", "Tasmanian Devil", "Kinkajou", "Binturong"],
     },
 ]
-var currentQuestion = 0;
+var counter = 0;
 $("#start-button").on("click", function () {
     startScreen.setAttribute("style", "display: none");
     question.classList.remove("d-none")
     askQuestions();
 })
 $(".buttonA").on("click", function(){
-    currentQuestion++;
+    counter = counter + 1;
     var mltplChoice =  $(".buttonA").parent().attr("1")
     var score = $(".buttonA").siblings(".btn").val();
     localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
 $(".buttonB").on("click", function(){
-    currentQuestion++;
+    counter = counter + 1;
     var mltplChoice =  $(".buttonB").parent().attr("2")
     var score = $(".buttonB").siblings(".btn").val();
     localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
 $(".buttonC").on("click", function(){
-    currentQuestion++;
+    counter = counter + 1;
     var mltplChoice =  $(".buttonC").parent().attr("3")
     var score = $(".buttonC").siblings(".btn").val();
     localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
 $(".buttonD").on("click", function(){
-    currentQuestion++;
+    counter = counter + 1;
     var mltplChoice =  $(".buttonD").parent().attr("4")
     var score = $(".buttonD").siblings(".btn").val();
     localStorage.setItem(mltplChoice, score)
@@ -72,8 +71,15 @@ btnArray.push(btnD)
 
 console.log(questions[0].choices)
 function askQuestions() {
-    currentTitle.textContent = questions[currentQuestion].title;
-    for (var i = 0; i < btnArray.length; i++) {
-    btnArray[i].textContent = questions[currentQuestion].choices[i];
+    if(counter !== 5){
+        currentTitle.textContent = questions[counter].title;
+        for (var i = 0; i < btnArray.length; i++) {
+        btnArray[i].textContent = questions[counter].choices[i];
+        }
+    }
+    else{
+        alert("You are all done");
+        //remove last question, add an element that shows score
+        return;
     }
 };
