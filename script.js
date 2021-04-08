@@ -78,8 +78,14 @@ function askQuestions() {
         }
     }
     else{
-        alert("You are all done");
+        yourColor();
         //remove last question, add an element that shows score
         return;
     }
 };
+
+function yourColor() {
+    var colorScreen = document.querySelector(".color-screen")
+    question.classList.add("d-none")
+    colorScreen.classList.remove("d-none");
+}
