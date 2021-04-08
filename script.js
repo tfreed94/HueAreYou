@@ -79,7 +79,6 @@ function askQuestions() {
     }
     else{
         yourColor();
-        //remove last question, add an element that shows score
         return;
     }
 };
