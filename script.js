@@ -1,10 +1,14 @@
 var startScreen = document.querySelector(".start-screen");
 var question = document.querySelector(".question");
-var currentTitle =document.querySelector(".title")
+var currentTitle = document.querySelector(".title")
 var btnA = document.querySelector(".buttonA")
 var btnB = document.querySelector(".buttonB")
 var btnC = document.querySelector(".buttonC")
 var btnD = document.querySelector(".buttonD")
+var purple = 'https://www.thecolorapi.com/id?hex=5D57CE&rgb=93,87,206&hsl=243,55%,57%&cmyk=55,58,0,19';
+var cyan = 'https://www.thecolorapi.com/id?&hex=00FFFF';
+var green = 'https://www.thecolorapi.com/id?&hex=9AE34A';
+var red = 'https://www.thecolorapi.com/id?&hex=DA1E51';
 
 var questions = [
     {
@@ -28,40 +32,43 @@ var questions = [
         choices: ["Coatimundi", "Tasmanian Devil", "Kinkajou", "Binturong"],
     },
 ]
+var counterB = 0;
 var counter = 0;
 $("#start-button").on("click", function () {
     startScreen.setAttribute("style", "display: none");
     question.classList.remove("d-none")
     askQuestions();
 })
-$(".buttonA").on("click", function(){
+$(".buttonA").on("click", function () {
     counter = counter + 1;
-    var mltplChoice =  $(".buttonA").parent().attr("1")
-    var score = $(".buttonA").siblings(".btn").val();
+    var mltplChoice = $(".buttonB").textContent = "Choice"
+    var score = $(this).attr("data-score-A");
     localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
-$(".buttonB").on("click", function(){
+$(".buttonB").on("click", function () {
     counter = counter + 1;
-    var mltplChoice =  $(".buttonB").parent().attr("2")
-    var score = $(".buttonB").siblings(".btn").val();
+    var mltplChoice = $(".buttonB").textContent = "Choice"
+    var score = $(this).attr("data-score-B");
     localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
-$(".buttonC").on("click", function(){
+$(".buttonC").on("click", function () {
     counter = counter + 1;
-    var mltplChoice =  $(".buttonC").parent().attr("3")
-    var score = $(".buttonC").siblings(".btn").val();
+    var mltplChoice = $(".buttonC").textContent = "Choice"
+    var score = $(this).attr("data-score-C");
     localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
-$(".buttonD").on("click", function(){
+$(".buttonD").on("click", function () {
     counter = counter + 1;
-    var mltplChoice =  $(".buttonD").parent().attr("4")
-    var score = $(".buttonD").siblings(".btn").val();
+    var mltplChoice = $(".buttonD").textContent = "Choice"
+    var score = $(this).attr("data-score-D");
     localStorage.setItem(mltplChoice, score)
     askQuestions()
 })
+
+
 
 var btnArray = [];
 btnArray.push(btnA)
@@ -71,13 +78,13 @@ btnArray.push(btnD)
 
 console.log(questions[0].choices)
 function askQuestions() {
-    if(counter !== 5){
+    if (counter !== 5) {
         currentTitle.textContent = questions[counter].title;
         for (var i = 0; i < btnArray.length; i++) {
-        btnArray[i].textContent = questions[counter].choices[i];
+            btnArray[i].textContent = questions[counter].choices[i];
         }
     }
-    else{
+    else {
         yourColor();
         return;
     }
@@ -87,4 +94,87 @@ function yourColor() {
     var colorScreen = document.querySelector(".color-screen")
     question.classList.add("d-none")
     colorScreen.classList.remove("d-none");
+    var plans = localStorage.getItem("Choice")
+    if (plans == 1) {
+        fetch(green)
+            .then(function (response) {
+                console.log("fetch");
+                return response.json()
+            }).then(function (data) {
+                console.log(data.hex.value)
+                var hex = data.hex.value;
+                var rgb = data.rgb.value;
+                $("body").css("background-color", hex);
+                $(".li1").text(hex);
+                $(".li2").text(rgb);
+            })
+            .catch(function () {
+            });
+
+    } else if (plans == 2) {
+        fetch(purple)
+            .then(function (response) {
+                console.log("fetch");
+                return response.json()
+            }).then(function (data) {
+                console.log(data.hex.value)
+                var hex = data.hex.value;
+                var rgb = data.rgb.value;
+                $("body").css("background-color", hex);
+                $(".li1").text(hex);
+                $(".li2").text(rgb);
+            })
+            .catch(function () {
+            });
+
+    } else if (plans == 3) {
+        fetch(cyan)
+            .then(function (response) {
+                console.log("fetch");
+                return response.json()
+            }).then(function (data) {
+                console.log(data.hex.value)
+                var hex = data.hex.value;
+                var rgb = data.rgb.value;
+                $("body").css("background-color", hex);
+                $(".li1").text(hex);
+                $(".li2").text(rgb);
+            })
+            .catch(function () {
+            });
+
+    } else if (plans == 4)
+        fetch(red)
+            .then(function (response) {
+                console.log("fetch");
+                return response.json()
+            }).then(function (data) {
+                console.log(data.hex.value)
+                var hex = data.hex.value;
+                var rgb = data.rgb.value;
+                $("body").css("background-color", hex);
+                $(".li1").text(hex);
+                $(".li2").text(rgb);
+            })
+            .catch(function () {
+            });
 }
+
+var requestUrl = 'https://www.thecolorapi.com/id?hex=5D57CE&rgb=93,87,206&hsl=243,55%,57%&cmyk=55,58,0,19';
+$("#button").on("click", function () {
+    console.log("clicked");
+    fetch(requestUrl)
+        .then(function (response) {
+            console.log("fetch");
+            return response.json()
+        }).then(function (data) {
+            console.log(data.hex.value)
+            var hex = data.hex.value;
+            var rgb = data.rgb.value;
+            $("body").css("background-color", hex);
+            $(".li1").text(hex);
+            $(".li2").text(rgb);
+        })
+        .catch(function () {
+        });
+})
