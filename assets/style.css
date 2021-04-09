@@ -15,9 +15,9 @@
   padding: 20px;
   margin: 2%;
   margin-left: 23%;
-  background-color: rgba(0, 0, 0, 0.589);
+  background-image: linear-gradient(to left, purple, cyan, green, red);
   color: white;
-  border-style: dashed;
+  border-style: solid;
   border-color: rgba(0, 0, 0, 0.281);
 }
 
@@ -33,3 +33,30 @@
   margin-left: 25%;
 }
 
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 5%;
+  padding: 20px;
+  border: solid;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  color: white;
+}
+
+.buttonA {
+  background-color: purple;
+}
+
+.buttonB {
+  background-color: cyan;
+}
+
+.buttonC {
+  background-color: green;
+}
+
+.buttonD {
+  background-color: red;
+}
