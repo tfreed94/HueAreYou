@@ -1,11 +1,38 @@
 .fa-tint {
-    color: red;
-    animation-name: colorcode;
-    animation-duration: 20s;
+  color: red;
+  animation-name: colorcode;
+  animation-duration: 20s;
 }
 @keyframes colorcode {
-    0%   {color: red;}
+  0%   {color: red;}
   25%  {color: yellow;}
   50%  {color: blue;}
   100% {color: green;}
+}
+
+.jumbotron {
+  width: 50%;
+  padding: 20px;
+  margin: 2%;
+  margin-left: 23%;
+  background-color: rgba(0, 0, 0, 0.589);
+  color: white;
+  border-style: dashed;
+  border-color: rgba(0, 0, 0, 0.281);
+}
+
+#start-button {
+  margin-left: 45%;
+}
+
+.display-4 {
+  margin-left: 29%;
+}
+
+.lead {
+  margin-left: 20%;
+}
+
+p {
+  margin-left: 20.5%;
 }
