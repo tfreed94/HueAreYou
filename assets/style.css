@@ -60,3 +60,19 @@
 .buttonD {
   background-color: red;
 }
+
+.colorDisplay {
+  padding: 5%;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+
+}
+
+
+.li3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 5%;
+  margin-top: 10%;
+  padding: 20px;
+
+}
