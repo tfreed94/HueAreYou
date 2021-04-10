@@ -108,9 +108,9 @@ function yourColor() {
                 var hex = data.hex.value;
                 var rgb = data.rgb.value;
                 $("body").css("background-color", hex);
-                $(".li1").text(hex);
-                $(".li2").text(rgb);
-                $(".li3").text("You were assigned the color Green. Having a personality color of green means you are kind, generous, and compassionate. You're someone who is good to have around during a crisis as you remain calm and take control of the situation until it is resolved. However you need to becareful of ignoring your own needs while giving to others.")
+                $(".li1").text("You were assigned the color Green. Having a personality color of green means you are kind, generous, and compassionate. You're someone who is good to have around during a crisis as you remain calm and take control of the situation until it is resolved. However you need to becareful of ignoring your own needs while giving to others.")
+                $(".li2").text("If you want to use this color in your code, you can use the following Hex code: " + hex);
+                $(".li3").text("If you want to use this color in your code, you can use the following RGB code: " + rgb);
             })
             .catch(function () {
             });
@@ -124,9 +124,9 @@ function yourColor() {
                 var hex = data.hex.value;
                 var rgb = data.rgb.value;
                 $("body").css("background-color", hex);
-                $(".li1").text(hex);
-                $(".li2").text(rgb);
-                $(".li3").text("You were assigned the color purple. Having a personality color of purple means you are sensitive and compassionate, understanding and supportive, always thinking of other people before yourself. People come to you for help and being needed motivates you. But because you are gentle people may sometimes try to take advantage of you. ");
+                $(".li1").text("You were assigned the color purple. Having a personality color of purple means you are sensitive and compassionate, understanding and supportive, always thinking of other people before yourself. People come to you for help and being needed motivates you. But because you are gentle people may sometimes try to take advantage of you. ");
+                $(".li2").text("If you want to use this color in your code, you can use the following Hex code: " + hex);
+                $(".li3").text("If you want to use this color in your code, you can use the following RGB code: " + rgb);
             })
             .catch(function () {
             });
@@ -140,9 +140,9 @@ function yourColor() {
                 var hex = data.hex.value;
                 var rgb = data.rgb.value;
                 $("body").css("background-color", hex);
-                $(".li1").text(hex);
-                $(".li2").text(rgb);
-                $(".li3").text("You were assigned the color cyan. Having the personality color of cyan means you love to encourage calmness and peaceful behaviors. You're a clear headed, rational thinker. You are big on cleanliness and hygeine. Sometimes you repress your emotions and have troubles sleeping. ")
+                $(".li1").text("You were assigned the color cyan. Having the personality color of cyan means you love to encourage calmness and peaceful behaviors. You're a clear headed, rational thinker. You are big on cleanliness and hygeine. Sometimes you repress your emotions and have troubles sleeping. ")
+                $(".li2").text("If you want to use this color in your code, you can use the following Hex code: " + hex);
+                $(".li3").text("If you want to use this color in your code, you can use the following RGB code: " + rgb);
             })
             .catch(function () {
             });
@@ -156,9 +156,9 @@ function yourColor() {
                 var hex = data.hex.value;
                 var rgb = data.rgb.value;
                 $("body").css("background-color", hex);
-                $(".li1").text("If you want to use this color in your code, you can use the following Hex code: " + hex);
-                $(".li2").text("If you want to use this color in your code, you can use the following RGB code: " + rgb);
-                $(".li3").text("You were assigned the color red. Having the personality color of red means you are courageous and optimistic and let off a great amount of energy. You are physically active and always take action when problems arise. You have strong survival instincts and are stimulating to be around. ")
+                $(".li1").text("You were assigned the color red. Having the personality color of red means you are courageous and optimistic and let off a great amount of energy. You are physically active and always take action when problems arise. You have strong survival instincts and are stimulating to be around. ")
+                $(".li2").text("If you want to use this color in your code, you can use the following Hex code: " + hex);
+                $(".li3").text("If you want to use this color in your code, you can use the following RGB code: " + rgb);
             })
             .catch(function () {
             });
