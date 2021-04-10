@@ -22,12 +22,4 @@ Technologies used:
 <h2>Links</h2>
 <p>Link to deployed application - https://tfreed94.github.io/HueAreYou/</p>
 <p>Link to GitHub repo - https://github.com/tfreed94/HueAreYou</p>
-thecolorapi.comthecolorapi.com
-The Color API
-The best color conversion, naming and scheming API out there.
-Font AwesomeFont Awesome
-Font Awesome
-The world’s most popular and easiest to use icon set just got an upgrade. More icons. More styles. More Options.
-GitHubGitHub
-tfreed94/HueAreYou
-Contribute to tfreed94/HueAreYou development by creating an account on GitHub.
+
