@@ -32,7 +32,7 @@ var questions = [
         choices: ["Coatimundi", "Tasmanian Devil", "Kinkajou", "Binturong"],
     },
 ]
-var counterB = 0;
+
 var counter = 0;
 $("#start-button").on("click", function () {
     startScreen.setAttribute("style", "display: none");
