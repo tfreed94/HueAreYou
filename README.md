@@ -16,6 +16,11 @@ Technologies used:
     * CSS
     * Javascript
     * Jquery
+
+![](assets/images/pic1.png)
+![](assets/images/pic2.png)
+![](assets/images/pic3.png)
+
 <h2>API Process:</h2>
 <p>https://www.thecolorapi.com/</p>
 <p>https://fontawesome.com/</p>>
