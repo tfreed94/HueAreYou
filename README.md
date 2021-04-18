@@ -28,3 +28,4 @@ Technologies used:
 <p>Link to deployed application - https://tfreed94.github.io/HueAreYou/</p>
 <p>Link to GitHub repo - https://github.com/tfreed94/HueAreYou</p>
 
+This project is liscensed under the terms of the MIT License
