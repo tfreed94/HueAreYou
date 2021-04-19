@@ -3,6 +3,12 @@
      Megan Knauss 
      Madison Keller
      Vick Phat
+
+# Contact Info :
+<p>tfreedwebdev94@gmail.com</p>
+<p>vickphat@gmail.com</p>
+<p>mknauss97@gmail.com</p>
+
 <h2>Project Drescription:</h2>
 <p>"Hue Are You?" is a quick and simple personality test to help a user find a color that matches their personality. Also, it will produce both a HEX code and an RGB code so that the user may use it to style their application.</p>
 <h2>Motivation:</h2>
